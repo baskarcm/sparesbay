@@ -1,16 +1,16 @@
 // react
-import React from 'react';
+import React from "react";
 // third-party
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from "react-intl";
 // application
-import AppImage from '~/components/shared/AppImage';
-import AppLink from '~/components/shared/AppLink';
-import Decor from '~/components/shared/Decor';
-import FooterContacts from '~/components/footer/FooterContacts';
-import FooterLinks from '~/components/footer/FooterLinks';
-import FooterNewsletter from '~/components/footer/FooterNewsletter';
+import AppImage from "~/components/shared/AppImage";
+import AppLink from "~/components/shared/AppLink";
+import Decor from "~/components/shared/Decor";
+import FooterContacts from "~/components/footer/FooterContacts";
+import FooterLinks from "~/components/footer/FooterLinks";
+import FooterNewsletter from "~/components/footer/FooterNewsletter";
 // data
-import theme from '~/data/theme';
+import theme from "~/data/theme";
 
 export function Footer() {
     return (
@@ -28,11 +28,11 @@ export function Footer() {
                                 header={<FormattedMessage id="HEADER_INFORMATION" />}
                                 links={[
                                     { title: <FormattedMessage id="LINK_ABOUT_US" /> },
-                                    { title: <FormattedMessage id="LINK_DELIVERY_INFORMATION" /> },
+                                    // { title: <FormattedMessage id="LINK_DELIVERY_INFORMATION" /> },
                                     { title: <FormattedMessage id="LINK_PRIVACY_POLICY" /> },
                                     { title: <FormattedMessage id="LINK_BRANDS" /> },
                                     { title: <FormattedMessage id="LINK_CONTACT_US" /> },
-                                    { title: <FormattedMessage id="LINK_RETURNS" /> },
+                                    // { title: <FormattedMessage id="LINK_RETURNS" /> },
                                     { title: <FormattedMessage id="LINK_SITE_MAP" /> },
                                 ]}
                             />
@@ -40,15 +40,15 @@ export function Footer() {
                         <div className="col-6 col-md-3 col-xl-2">
                             <FooterLinks
                                 className="site-footer__widget"
-                                header={<FormattedMessage id="HEADER_MY_ACCOUNT" />}
+                                header={<FormattedMessage id="Useful Links" />}
                                 links={[
                                     { title: <FormattedMessage id="LINK_STORE_LOCATION" /> },
-                                    { title: <FormattedMessage id="LINK_ORDER_HISTORY" /> },
+                                    // { title: <FormattedMessage id="LINK_ORDER_HISTORY" /> },
                                     { title: <FormattedMessage id="LINK_WISH_LIST" /> },
-                                    { title: <FormattedMessage id="LINK_NEWSLETTER" /> },
-                                    { title: <FormattedMessage id="LINK_SPECIAL_OFFERS" /> },
-                                    { title: <FormattedMessage id="LINK_GIFT_CERTIFICATES" /> },
-                                    { title: <FormattedMessage id="LINK_AFFILIATE" /> },
+                                    // { title: <FormattedMessage id="LINK_NEWSLETTER" /> },
+                                    // { title: <FormattedMessage id="LINK_SPECIAL_OFFERS" /> },
+                                    // { title: <FormattedMessage id="LINK_GIFT_CERTIFICATES" /> },
+                                    // { title: <FormattedMessage id="LINK_AFFILIATE" /> },
                                 ]}
                             />
                         </div>
@@ -63,19 +63,23 @@ export function Footer() {
                     <div className="site-footer__bottom-row">
                         <div className="site-footer__copyright">
                             {/* copyright */}
-                            {'Powered by '}
-                            <AppLink href="https://reactjs.org/" target="_blank" rel="noreferrer">React</AppLink>
-                            {' / '}
-                            <AppLink href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</AppLink>
-                            {' — Designed by '}
-                            <AppLink href={theme.author.profile_url} target="_blank" rel="noreferrer">
-                                {theme.author.name}
+                            {"Powered by "}
+                            {/* <AppLink href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                                React
                             </AppLink>
+                            {" / "} */}
+                            <AppLink href="https://nextjs.org/" target="_blank" rel="noreferrer">
+                                TZI
+                            </AppLink>
+
+                            {/* <AppLink href={theme.author.profile_url} target="_blank" rel="noreferrer">
+                                {theme.author.name}
+                            </AppLink> */}
                             {/* copyright / end */}
                         </div>
-                        <div className="site-footer__payments">
+                        {/* <div className="site-footer__payments">
                             <AppImage src="/images/payments.png" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

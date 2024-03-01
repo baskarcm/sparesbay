@@ -5,6 +5,8 @@ import { FormattedMessage } from "react-intl";
 // application
 import AppLink from "~/components/shared/AppLink";
 import url from "~/services/url";
+import LOGO from "../../../public/images/LOGO.png";
+import Image from "next/legacy/image";
 
 interface Props extends React.HTMLAttributes<HTMLElement> {}
 
@@ -16,6 +18,13 @@ function Logo(props: Props) {
                     <FormattedMessage id="TEXT_SLOGAN" />
                 </div>
                 <div className="logo__image">
+                    <Image
+                        src={LOGO}
+                        alt="logo"
+                        className="newLogo mt-1"
+                        id="myImage"
+                        style={{ minHeight: "95%", minWidth: "95%" }}
+                    />
                     {/* logo */}
                     {/* <svg xmlns="http://www.w3.org/2000/svg" width="168" height="26">
                         <path
@@ -60,7 +69,7 @@ h-4c-0.6,0-1,0.4-1,1v6c0,0.6,0.4,1,1,1h4c2.2,0,4-1.8,4-4S77.2,5,75,5z"
                     /> */}
                     {/* logo / end */}
 
-                    <svg
+                    {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         version="1.1"
                         width="168px"
@@ -292,7 +301,7 @@ h-4c-0.6,0-1,0.4-1,1v6c0,0.6,0.4,1,1,1h4c2.2,0,4-1.8,4-4S77.2,5,75,5z"
                                 d="M 136.5,25.5 C 134.396,25.2011 132.396,25.5344 130.5,26.5C 129.424,29.2195 127.757,29.8861 125.5,28.5C 126.5,28.5 127.5,28.5 128.5,28.5C 128.33,27.1779 128.663,26.0113 129.5,25C 132.039,24.2042 134.372,24.3709 136.5,25.5 Z"
                             />
                         </g>
-                    </svg>
+                    </svg> */}
                 </div>
             </AppLink>
         </div>

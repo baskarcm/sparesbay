@@ -1,10 +1,9 @@
 /*
 // .block-slideshow
 */
-@import '../variables';
-@import '../mixins/breakpoints';
-@import '../mixins/direction';
-
+@import "../variables";
+@import "../mixins/breakpoints";
+@import "../mixins/direction";
 
 @mixin local-item-active {
     .correct-slick-active & {
@@ -12,8 +11,8 @@
     }
 }
 
-
-.block-slideshow {}
+.block-slideshow {
+}
 .block-slideshow__item {
     border-radius: 2.5px;
     overflow: hidden;
@@ -52,9 +51,7 @@
     padding: 2px 8px 0;
     margin-bottom: 12px;
     opacity: 0;
-    transition:
-        transform .5s .5s,
-        opacity .5s .5s;
+    transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
 
     @include direction {
         transform: translateX(#{-24px * $transform-direction});
@@ -66,13 +63,12 @@
     }
 }
 .block-slideshow__item-title {
-    font-size: 48px;
+    font-size: 36px;
     line-height: 56px;
     font-weight: $font-weight-bold;
     display: block;
     opacity: 0;
-    transition:
-        opacity .8s .2s;
+    transition: opacity 0.8s 0.2s;
 
     @include local-item-active() {
         opacity: 1;
@@ -87,9 +83,7 @@
     flex-grow: 1;
     transform: translateY(12px);
     opacity: 0;
-    transition:
-        transform .5s .5s,
-        opacity .5s .5s;
+    transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
 
     @include local-item-active() {
         transform: translateX(0);
@@ -103,10 +97,7 @@
     line-height: 28px;
     padding: 10px 40px;
     border-radius: 2px;
-    transition:
-        background-color .2s,
-        color .2s,
-        opacity .5s .5s;
+    transition: background-color 0.2s, color 0.2s, opacity 0.5s 0.5s;
     background: map_get($btn-primary-scheme, normal-bg-color);
     color: map_get($btn-primary-scheme, normal-font-color);
     opacity: 0;
@@ -164,8 +155,6 @@
         }
     }
 }
-
-
 
 @include media-breakpoint-down(xl) {
     .block-slideshow__item {

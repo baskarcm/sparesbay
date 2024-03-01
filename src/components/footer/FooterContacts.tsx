@@ -1,9 +1,9 @@
 // react
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from "react";
 // third-party
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from "react-intl";
 // data
-import theme from '~/data/theme';
+import theme from "~/data/theme";
 
 const FooterContacts: FunctionComponent<React.HTMLAttributes<HTMLElement>> = () => (
     <div className="footer-contacts">
@@ -28,24 +28,11 @@ const FooterContacts: FunctionComponent<React.HTMLAttributes<HTMLElement>> = () 
                 <dt>
                     <FormattedMessage id="TEXT_EMAIL_ADDRESS" />
                 </dt>
+                {/* {theme.contacts.email.map((item, index) => (
+                    <dd key={index}>{item}</dd>
+                ))} */}
                 {theme.contacts.email.map((item, index) => (
-                    <dd key={index}>{item}</dd>
-                ))}
-            </dl>
-            <dl>
-                <dt>
-                    <FormattedMessage id="TEXT_OUR_LOCATION" />
-                </dt>
-                {theme.contacts.address.map((item, index) => (
-                    <dd key={index}>{item}</dd>
-                ))}
-            </dl>
-            <dl>
-                <dt>
-                    <FormattedMessage id="TEXT_WORKING_HOURS" />
-                </dt>
-                {theme.contacts.hours.map((item, index) => (
-                    <dd key={index}>{item}</dd>
+                    <dd key={index}>sales@sparesbay.com</dd>
                 ))}
             </dl>
         </address>

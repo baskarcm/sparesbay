@@ -1,11 +1,10 @@
 /*
 // .quickview
 */
-@import '../variables';
-@import '../mixins/direction';
-@import '../mixins/breakpoints';
-@import '../mixins/scheme';
-
+@import "../variables";
+@import "../mixins/direction";
+@import "../mixins/breakpoints";
+@import "../mixins/scheme";
 
 .quickview {
     max-width: 800px;
@@ -24,9 +23,7 @@
     border-radius: 0 2.5px 0 2.5px;
     background: transparent;
     fill: currentColor;
-    transition:
-        background .2s,
-        color .2s;
+    transition: background 0.2s, color 0.2s;
 
     @include define-button-scheme($btn-muted-scheme);
     @include direction {
@@ -56,8 +53,6 @@
     flex-grow: 1;
 }
 
-
-
 .quickview__product-name {
     font-size: 24px;
     line-height: 28px;
@@ -65,7 +60,7 @@
     margin-top: -2px;
 }
 .quickview__product-rating {
-    display: flex;
+    display: none;
     margin-top: 6px;
 }
 .quickview__product-rating-title {
@@ -139,7 +134,7 @@
 .quickview__product-price {
     font-size: 24px;
     font-weight: $font-weight-bold;
-    letter-spacing: -.04em;
+    letter-spacing: -0.04em;
     color: $price-color;
 }
 .quickview__product-price--new {
@@ -184,9 +179,7 @@
     font-size: 15px;
     height: $local-height;
     line-height: ($local-height - 2px);
-    transition:
-        background .15s,
-        border-color .15s;
+    transition: background 0.15s, border-color 0.15s;
 
     &:hover {
         color: map_get($card-scheme, opposite-alt);
@@ -197,7 +190,6 @@
         transition-duration: 0s;
     }
 }
-
 
 @include media-breakpoint-down(md) {
     .quickview {

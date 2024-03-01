@@ -1,15 +1,42 @@
 // react
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from "react";
 // third-party
-import classNames from 'classnames';
+import classNames from "classnames";
 // application
-import AppLink from '~/components/shared/AppLink';
-import Megamenu from '~/components/header/Megamenu';
-import { ArrowRoundedDown9x6Svg, ArrowRoundedRight7x11Svg, Menu16x12Svg } from '~/svg';
-import { IDepartmentsLink } from '~/interfaces/departments-link';
-import { useGlobalMousedown } from '~/services/hooks';
+import AppLink from "~/components/shared/AppLink";
+import Megamenu from "~/components/header/Megamenu";
+import { ArrowRoundedDown9x6Svg, ArrowRoundedRight7x11Svg, Menu16x12Svg } from "~/svg";
+import { IDepartmentsLink } from "~/interfaces/departments-link";
+import { useGlobalMousedown } from "~/services/hooks";
 // data
-import dataHeaderDepartments from '~/data/headerDepartments';
+import dataHeaderDepartments from "~/data/headerDepartments";
+
+const departments: any = [
+    { title: "Audi" },
+    { title: "BMW" },
+    { title: "Benz" },
+    { title: "Cadillac" },
+    { title: "Chevrolet" },
+    { title: "Ferrari" },
+    { title: "Ford" },
+    { title: "Honda" },
+    { title: "Hyundai" },
+    { title: "Isuzu" },
+    { title: "Kia" },
+    { title: "Land rover" },
+    { title: "Lexus" },
+    { title: "Maserati" },
+    { title: "Mini" },
+    { title: "Mitsubisi" },
+    { title: "Porshe" },
+    { title: "Range rover" },
+    { title: "Skoda" },
+    { title: "Tesla" },
+    { title: "Toyota" },
+    { title: "Volkswagon" },
+    { title: "Volvo" },
+    { title: "Beklyn" },
+];
 
 interface Props {
     label: React.ReactNode;
@@ -42,14 +69,17 @@ function Departments(props: Props) {
         setCurrentItem(null);
     }, [setIsOpen, setCurrentItem]);
 
-    useGlobalMousedown((event) => {
-        if (rootRef.current && !rootRef.current.contains(event.target as HTMLElement)) {
-            setIsOpen(false);
-        }
-    }, [setIsOpen, rootRef]);
+    useGlobalMousedown(
+        (event) => {
+            if (rootRef.current && !rootRef.current.contains(event.target as HTMLElement)) {
+                setIsOpen(false);
+            }
+        },
+        [setIsOpen, rootRef]
+    );
 
-    const classes = classNames('departments', {
-        'departments--open': isOpen,
+    const classes = classNames("departments", {
+        "departments--open": isOpen,
     });
 
     return (
@@ -58,9 +88,7 @@ function Departments(props: Props) {
                 <span className="departments__button-icon">
                     <Menu16x12Svg />
                 </span>
-                <span className="departments__button-title">
-                    {label}
-                </span>
+                <span className="departments__button-title">{label}</span>
                 <span className="departments__button-arrow">
                     <ArrowRoundedDown9x6Svg />
                 </span>
@@ -74,20 +102,17 @@ function Departments(props: Props) {
                             role="presentation"
                             onMouseEnter={handleListPaddingMouseEnter}
                         />
-                        {dataHeaderDepartments.map((item, index) => {
+                        {/* {dataHeaderDepartments.map((item, index) => { */}
+                        {departments.map((item: any, index) => {
                             const itemHasSubmenu = !!item.submenu;
-                            const itemClasses = classNames('departments__item', {
-                                'departments__item--has-submenu': itemHasSubmenu,
-                                'departments__item--submenu--megamenu': item.submenu?.type === 'megamenu',
-                                'departments__item--hover': item === currentItem,
+                            const itemClasses = classNames("departments__item", {
+                                "departments__item--has-submenu": itemHasSubmenu,
+                                "departments__item--submenu--megamenu": item.submenu?.type === "megamenu",
+                                "departments__item--hover": item === currentItem,
                             });
 
                             return (
-                                <li
-                                    className={itemClasses}
-                                    key={index}
-                                    onMouseEnter={() => handleItemMouseEnter(item)}
-                                >
+                                <li className={itemClasses} key={index} onMouseEnter={() => handleItemMouseEnter(item)}>
                                     <AppLink
                                         className="departments__item-link"
                                         href={item.url}
@@ -95,11 +120,11 @@ function Departments(props: Props) {
                                         {...item.customFields?.anchorProps}
                                     >
                                         {item.title}
-                                        {itemHasSubmenu && (
+                                        {/* {itemHasSubmenu && (
                                             <span className="departments__item-arrow">
                                                 <ArrowRoundedRight7x11Svg />
                                             </span>
-                                        )}
+                                        )} */}
                                     </AppLink>
                                 </li>
                             );
@@ -118,11 +143,11 @@ function Departments(props: Props) {
                             }
 
                             const itemClasses = classNames(
-                                'departments__megamenu',
+                                "departments__megamenu",
                                 `departments__megamenu--size--${item.submenu.size}`,
                                 {
-                                    'departments__megamenu--open': item === currentItem,
-                                },
+                                    "departments__megamenu--open": item === currentItem,
+                                }
                             );
 
                             return (

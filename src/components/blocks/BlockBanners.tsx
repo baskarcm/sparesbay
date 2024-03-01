@@ -1,10 +1,10 @@
 // react
-import React from 'react';
+import React from "react";
 // third-party
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from "react-intl";
 // application
-import AppImage from '~/components/shared/AppImage';
-import AppLink from '~/components/shared/AppLink';
+import AppImage from "~/components/shared/AppImage";
+import AppLink from "~/components/shared/AppLink";
 
 function BlockBanners() {
     const intl = useIntl();
@@ -26,7 +26,9 @@ function BlockBanners() {
                         <span
                             className="block-banners__item-details"
                             dangerouslySetInnerHTML={{
-                                __html: intl.formatMessage({ id: 'TEXT_BANNER_ONE_SUBTITLE' }),
+                                __html: intl.formatMessage({
+                                    id: "Motor acces with free shipping, warranty, guarantee",
+                                }),
                             }}
                         />
                         <span className="block-banners__item-button btn btn-primary btn-sm">
@@ -47,7 +49,7 @@ function BlockBanners() {
                         <span
                             className="block-banners__item-details"
                             dangerouslySetInnerHTML={{
-                                __html: intl.formatMessage({ id: 'TEXT_BANNER_TWO_SUBTITLE' }),
+                                __html: intl.formatMessage({ id: "TEXT_BANNER_TWO_SUBTITLE" }),
                             }}
                         />
                         <span className="block-banners__item-button btn btn-primary btn-sm">

@@ -1,11 +1,11 @@
 // react
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from "react";
 // third-party
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from "react-intl";
 // application
-import AppLink from '~/components/shared/AppLink';
+import AppLink from "~/components/shared/AppLink";
 // data
-import theme from '~/data/theme';
+import theme from "~/data/theme";
 
 const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = () => {
     const intl = useIntl();
@@ -14,12 +14,19 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
         event.preventDefault();
     };
 
+    // const socialLinks = [
+    //     { type: 'facebook', url: theme.author.profile_url, icon: 'fab fa-facebook-f' },
+    //     { type: 'twitter', url: theme.author.profile_url, icon: 'fab fa-twitter' },
+    //     { type: 'youtube', url: theme.author.profile_url, icon: 'fab fa-youtube' },
+    //     { type: 'instagram', url: theme.author.profile_url, icon: 'fab fa-instagram' },
+    //     { type: 'rss', url: theme.author.profile_url, icon: 'fas fa-rss' },
+    // ];
     const socialLinks = [
-        { type: 'facebook', url: theme.author.profile_url, icon: 'fab fa-facebook-f' },
-        { type: 'twitter', url: theme.author.profile_url, icon: 'fab fa-twitter' },
-        { type: 'youtube', url: theme.author.profile_url, icon: 'fab fa-youtube' },
-        { type: 'instagram', url: theme.author.profile_url, icon: 'fab fa-instagram' },
-        { type: 'rss', url: theme.author.profile_url, icon: 'fas fa-rss' },
+        { type: "facebook", url: "", icon: "fab fa-facebook-f" },
+        { type: "twitter", url: "", icon: "fab fa-twitter" },
+        { type: "youtube", url: "", icon: "fab fa-youtube" },
+        { type: "instagram", url: "", icon: "fab fa-instagram" },
+        { type: "rss", url: "", icon: "fas fa-rss" },
     ];
 
     return (
@@ -39,12 +46,9 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
                     id="footer-newsletter-address"
                     type="text"
                     className="footer-newsletter__form-input"
-                    placeholder={intl.formatMessage({ id: 'INPUT_EMAIL_ADDRESS_PLACEHOLDER' })}
+                    placeholder={intl.formatMessage({ id: "INPUT_EMAIL_ADDRESS_PLACEHOLDER" })}
                 />
-                <button
-                    type="submit"
-                    className="footer-newsletter__form-button"
-                >
+                <button type="submit" className="footer-newsletter__form-button">
                     <FormattedMessage id="BUTTON_SUBSCRIBE" />
                 </button>
             </form>

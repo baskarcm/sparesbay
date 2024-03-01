@@ -198,30 +198,29 @@ function Page() {
     const slides = useMemo(
         () => [
             {
-                url: "/catalog/products",
+                url: "",
                 desktopImage: "/images/slides/slide-3.jpg",
                 mobileImage: "/images/slides/slide-3-mobile.jpg",
-                offer: "30% OFF",
-                title: "When Buying Parts <br>With Installation",
-                details: "Installation of parts in the services of <br>our partners.",
+                offer: "",
+                title: "Upgrade your ride,<br> elevate your journey!",
+                details: "Premium Auto Spares",
                 buttonLabel: "Shop Now",
             },
             {
                 url: "/catalog/products",
                 desktopImage: "/images/slides/slide-2.jpg",
                 mobileImage: "/images/slides/slide-2-mobile.jpg",
-                title: "Not enough <br>spare parts?",
-                details:
-                    "We have everything you need – replacement parts, <br>performance parts, accessories, oil & fluids, <br>tools and much more...",
+                title: "Upgrade your ride,<br> elevate your journey!",
+                details: "Premium Auto Spares",
                 buttonLabel: "Shop Now",
             },
             {
                 url: "/catalog/products",
                 desktopImage: "/images/slides/slide-1.jpg",
                 mobileImage: "/images/slides/slide-1-mobile.jpg",
-                offer: "30% OFF",
-                title: "Big Choice Of <br>Wheel Tires",
-                details: "Any size and diameter, with or without spikes, <br>summer or winter, rain or snow.",
+                offer: "",
+                title: "Upgrade your ride,<br> elevate your journey!",
+                details: "Premium Auto Spares",
                 buttonLabel: "Shop Now",
             },
         ],
@@ -281,11 +280,11 @@ function Page() {
         useMemo(
             () => [
                 {
-                    title: "Top Rated Products",
+                    title: "New Spares",
                     source: () => shopApi.getTopRatedProducts(null, 3),
                 },
                 {
-                    title: "Special Offers",
+                    title: "Used Spares",
                     source: () => shopApi.getSpecialOffers(3),
                 },
                 {

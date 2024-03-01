@@ -1,16 +1,16 @@
 // react
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // third-party
-import classNames from 'classnames';
+import classNames from "classnames";
 // application
-import AppLink from '~/components/shared/AppLink';
-import Megamenu from '~/components/header/Megamenu';
-import Menu from '~/components/header/Menu';
-import { ArrowDownSm7x5Svg } from '~/svg';
-import { IMainMenuLink } from '~/interfaces/main-menu-link';
-import { useOptions } from '~/store/options/optionsHooks';
+import AppLink from "~/components/shared/AppLink";
+import Megamenu from "~/components/header/Megamenu";
+import Menu from "~/components/header/Menu";
+import { ArrowDownSm7x5Svg } from "~/svg";
+import { IMainMenuLink } from "~/interfaces/main-menu-link";
+import { useOptions } from "~/store/options/optionsHooks";
 // data
-import dataHeaderMainMenu from '~/data/headerMainMenu';
+import dataHeaderMainMenu from "~/data/headerMainMenu";
 
 function MainMenu() {
     const items: IMainMenuLink[] = dataHeaderMainMenu;
@@ -41,11 +41,11 @@ function MainMenu() {
                     }
 
                     const itemHasSubmenu = !!item.submenu;
-                    const itemClasses = classNames('main-menu__item', {
-                        'main-menu__item--has-submenu': itemHasSubmenu,
-                        'main-menu__item--submenu--menu': item.submenu?.type === 'menu',
-                        'main-menu__item--submenu--megamenu': item.submenu?.type === 'megamenu',
-                        'main-menu__item--hover': item === currentItem,
+                    const itemClasses = classNames("main-menu__item", {
+                        "main-menu__item--has-submenu": itemHasSubmenu,
+                        "main-menu__item--submenu--menu": item.submenu?.type === "menu",
+                        "main-menu__item--submenu--megamenu": item.submenu?.type === "megamenu",
+                        "main-menu__item--hover": item === currentItem,
                     });
 
                     return (
@@ -67,14 +67,14 @@ function MainMenu() {
 
                             {itemHasSubmenu && (
                                 <div className="main-menu__submenu">
-                                    {item.submenu?.type === 'menu' && (
+                                    {item.submenu?.type === "menu" && (
                                         <Menu items={item.submenu.links} onItemClick={handleItemClick} />
                                     )}
-                                    {item.submenu?.type === 'megamenu' && (
+                                    {item.submenu?.type === "megamenu" && (
                                         <div
                                             className={classNames(
-                                                'main-menu__megamenu',
-                                                `main-menu__megamenu--size--${item.submenu.size}`,
+                                                "main-menu__megamenu",
+                                                `main-menu__megamenu--size--${item.submenu.size}`
                                             )}
                                         >
                                             <Megamenu menu={item.submenu} onItemClick={handleItemClick} />

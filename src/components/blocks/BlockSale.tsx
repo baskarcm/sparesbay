@@ -1,18 +1,18 @@
 // react
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 // third-party
-import classNames from 'classnames';
-import Slick from 'react-slick';
-import { FormattedMessage } from 'react-intl';
+import classNames from "classnames";
+import Slick from "react-slick";
+import { FormattedMessage } from "react-intl";
 // application
-import AppLink from '~/components/shared/AppLink';
-import AppSlick, { ISlickProps } from '~/components/shared/AppSlick';
-import Arrow from '~/components/shared/Arrow';
-import Decor from '~/components/shared/Decor';
-import ProductCard from '~/components/shared/ProductCard';
-import Timer from '~/components/shared/Timer';
-import { baseUrl } from '~/services/utils';
-import { IProduct } from '~/interfaces/product';
+import AppLink from "~/components/shared/AppLink";
+import AppSlick, { ISlickProps } from "~/components/shared/AppSlick";
+import Arrow from "~/components/shared/Arrow";
+import Decor from "~/components/shared/Decor";
+import ProductCard from "~/components/shared/ProductCard";
+import Timer from "~/components/shared/Timer";
+import { baseUrl } from "~/services/utils";
+import { IProduct } from "~/interfaces/product";
 
 interface Props {
     products: IProduct[];
@@ -50,23 +50,21 @@ function BlockSale(props: Props) {
         }
     };
 
-    const rootClasses = classNames('block', 'block-sale', { 'block-sale--loading': loading });
+    const rootClasses = classNames("block", "block-sale", { "block-sale--loading": loading });
 
     return (
         <div className={rootClasses}>
             <div className="block-sale__content">
                 <div className="block-sale__header">
                     <div className="block-sale__title">
-                        <FormattedMessage id="HEADER_DEAL_ZONE_TITLE" />
+                        <FormattedMessage id="Used Spares" />
                     </div>
                     <div className="block-sale__subtitle">
-                        <FormattedMessage id="HEADER_DEAL_ZONE_SUBTITLE" />
+                        {/* <FormattedMessage id="HEADER_DEAL_ZONE_SUBTITLE" /> */}
                     </div>
-                    <div className="block-sale__timer">
-                        <Timer time={3 * 24 * 60 * 60} />
-                    </div>
+                    <div className="block-sale__timer">{/* <Timer time={3 * 24 * 60 * 60} /> */}</div>
                     <div className="block-sale__controls">
-                        <Arrow
+                        {/* <Arrow
                             className="block-sale__arrow block-sale__arrow--prev"
                             direction="prev"
                             onClick={handlePrevClick}
@@ -80,7 +78,7 @@ function BlockSale(props: Props) {
                             className="block-sale__arrow block-sale__arrow--next"
                             direction="next"
                             onClick={handleNextClick}
-                        />
+                        /> */}
                         <Decor type="center" className="block-sale__header-decor" />
                     </div>
                 </div>
@@ -88,7 +86,7 @@ function BlockSale(props: Props) {
                     <Decor type="bottom" className="block-sale__body-decor" />
                     <div
                         className="block-sale__image"
-                        style={{ backgroundImage: `url(${baseUrl('/images/sale.jpg')})` }}
+                        style={{ backgroundImage: `url(${baseUrl("/images/sale.jpg")})` }}
                     />
                     <div className="block-sale__loader" />
                     <div className="container">
@@ -96,10 +94,7 @@ function BlockSale(props: Props) {
                             <AppSlick ref={slickRef} {...slickSettings}>
                                 {products.map((product) => (
                                     <div key={product.id} className="block-sale__item">
-                                        <ProductCard
-                                            product={product}
-                                            exclude={['features', 'list-buttons']}
-                                        />
+                                        <ProductCard product={product} exclude={["features", "list-buttons"]} />
                                     </div>
                                 ))}
                             </AppSlick>

@@ -213,8 +213,8 @@ const productsDef: IProductDef[] = [
         sku: '140-10440-B',
         price: 19,
         images: [
-            '/images/products/product-1-1.jpg',
-            '/images/products/product-1-2.jpg',
+            '/images/products/1.jpg',
+            '/images/products/1.jpg',
         ],
         badges: ['sale', 'new', 'hot'],
         rating: 4,
@@ -296,7 +296,7 @@ const productsDef: IProductDef[] = [
         },
     },
     {
-        name: 'Motor Oil Level 5',
+        name: 'Tyres',
         slug: 'motor-oil-level-5',
         sku: '573-49386-C',
         price: 23,
@@ -354,7 +354,7 @@ const productsDef: IProductDef[] = [
         price: 879,
         images: [
             '/images/products/product-9-1.jpg',
-            '/images/products/product-9-2.jpg',
+            '/images/products/1.jpg',
         ],
         rating: 4,
         reviews: 6,

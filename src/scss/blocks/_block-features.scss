@@ -1,13 +1,13 @@
 /*
 // .block-features
 */
-@import '../variables';
-@import '../mixins/card';
-@import '../mixins/direction';
-@import '../mixins/breakpoints';
+@import "../variables";
+@import "../mixins/card";
+@import "../mixins/direction";
+@import "../mixins/breakpoints";
 
-
-.block-features {}
+.block-features {
+}
 .block-features__list {
     display: flex;
     list-style: none;
@@ -47,20 +47,17 @@
     padding: ((2 / 18) * 1em) 0;
 }
 
-
-
 .block-features--layout--top-strip {
     .block-features__list {
         border-bottom: 2px solid map_get($body-scheme, divider);
     }
 }
 .block-features--layout--bottom-strip {
+    display: none !important;
     .block-features__list {
         border-top: 2px solid map_get($body-scheme, divider);
     }
 }
-
-
 
 @include media-breakpoint-down(xl) {
     .block-features__list {
@@ -79,7 +76,7 @@
 }
 @include media-breakpoint-down(lg) {
     .block-features__item {
-        padding: 1.375rem .75rem;
+        padding: 1.375rem 0.75rem;
     }
     .block-features__item-icon {
         @include direction {
@@ -115,7 +112,7 @@
     }
     .block-features__item {
         width: 50%;
-        padding: .75rem 1.25rem;
+        padding: 0.75rem 1.25rem;
     }
 }
 @media (max-width: 575px) and (min-width: 400px) {
@@ -139,7 +136,7 @@
 @media (max-width: 399px) {
     .block-features__item {
         width: 100%;
-        padding: .675rem 1.25rem;
+        padding: 0.675rem 1.25rem;
     }
     .block-features__item-icon {
         @include direction {

@@ -246,11 +246,11 @@ function Page() {
     const columns = useProductColumns(
         useMemo(() => [
             {
-                title: 'Top Rated Products',
+                title: 'New Spares',
                 source: () => shopApi.getTopRatedProducts(null, 3),
             },
             {
-                title: 'Special Offers',
+                title: 'Used Spares',
                 source: () => shopApi.getSpecialOffers(3),
             },
             {
