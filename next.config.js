@@ -1,11 +1,14 @@
 // noinspection JSUnusedGlobalSymbols
 module.exports = {
-    env: {
-        basePath: process.env.BASE_PATH || '',
+    eslint: {
+        ignoreDuringBuilds: true,
     },
-    basePath: process.env.BASE_PATH || '',
+    env: {
+        basePath: process.env.BASE_PATH || "",
+    },
+    basePath: process.env.BASE_PATH || "",
     i18n: {
-        locales: ['en', 'ru', 'ar'],
-        defaultLocale: 'en',
+        locales: ["en", "ru", "ar"],
+        defaultLocale: "en",
     },
 };

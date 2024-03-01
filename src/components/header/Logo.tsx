@@ -5,8 +5,6 @@ import { FormattedMessage } from "react-intl";
 // application
 import AppLink from "~/components/shared/AppLink";
 import url from "~/services/url";
-import LOGO from "../../../public/images/LOGO.png";
-import Image from "next/legacy/image";
 
 interface Props extends React.HTMLAttributes<HTMLElement> {}
 
